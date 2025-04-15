@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week one (actually)</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing:border-box;
+            outline: none;
+        }
+        body {
+            background-color: palegoldenrod;
+        }
+        .heading1 {
+            color:rgb(115, 195, 95);
+            background-color: rgb(125, 233, 98);
+        }
+        .div0 {
+            margin-left: 40%;
+        }
+        .div1 {
+            margin: 10px;
+            background-color: aquamarine;
+            text-align: center;
+            color: lightseagreen;
+            font-family: sourcecodepro;
+        }
+        .div2 {
+            margin-left: 10px;
+            margin-right: 10px;
+            background-color: pink;
+            text-align: center;
+            color: salmon;
+            font-family: sourcecodepro;
+        }
+        .div3 {
+            margin: 10px;
+            text-align: center;
+            font-family: SourceCodePro;
+        }
+        .div4 {
+            margin: 15px;
+            font-family: SourceCodePro;
+        }
+        .text-slide {
+            animation: slide 10s linear;
+        }
+        .text-slide2 {
+            animation: slide 10s linear reverse;
+        }
+        .dropbtn {
+            background-color: #8790e2;
+            color: #5a5f94;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            font-family: sourcecodepro;
+        }
+        .dropdown {
+        position: relative;
+        display: inline-block;
+        margin: 10px;
+        font-family: sourcecodepro;
+        }
+        .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        }
+        .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        }
+        .dropdown-content a:hover {background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content {display: block;
+        }
+        .dropdown:hover .dropbtn {background-color: #757cc1;
+        }
+        .dropdown-submenu {
+        position: relative;
+        }
+        .dropdown-submenu .dropdown-content2 {
+        display: none;
+        left: 100%; 
+        top: 0;
+        }
+        .dropdown-submenu:hover .dropdown-content2 {
+        display: block;
+        }
+        .dropdown-submenu > a {
+        display: block;
+        padding: 12px 16px;
+         }
+         .dropdown-submenu .dropdown-content2 {
+        display: none;
+        position: absolute;
+        left: 100%;
+        top: 0;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        }
+        img {
+            margin: 20px;
+            border: 10px solid rgb(245, 209, 119);
+            border-radius: 5px;
+        }
+        @font-face {
+            font-family: SourceCodePro;
+            src: url('fonts_week1.1/SourceCodePro-VariableFont_wght.ttf') format('truetype');
+        }
+        @keyframes slide {
+    from {
+        transform: translateX(-100%);
+        
+    }
+    to {
+        transform: translateX(100%);
+        
+    }
+}
+    </style>
+    </head>
+<body>
+    <div class="text-slide div1">
+        <h1>THIS IS<i> REALLY </i>WEEK ONE</h1>
+    </div>
+    <div class="text-slide2 div2">
+        <h1>INTERACTIVE MEDIA</h1>
+    </div>
+    <div class="div3">
+        <h1 class="heading1">WEEK ONE RECAP</h1>
+        <p style="color: rgb(203, 169, 82)"><br><B>Grand Gestures</B><br></p>
+        <img src="img_week1.1/gesture1.jpg" height="200px" width="auto" alt="gesture1">
+        <img src="img_week1.1/gesture2.jpg" height="200px" width="auto" alt="gesture2">
+        <p>Our first gesture: 'Bunny'. Hold up two fingers when you see a puppy. Well done.</p><br>
+        <p>Our second gesture: 'Time to Get Going'. Tired? Rubbings your eyes? Good thing your coffee machine just turned on! What a day great day.</p>
+        <p style="color: rgb(203, 169, 82)"><br><B>Unfolding the Code</B><br></p>
+        <br><p>Basically, coding is so cool. But behind every cool code... is a cooler filing system.<br> <br> So first we folder!<br>Hover over the drop down menu below to unfold filing system.</p>
+    </div>
+<div class="div0">    
+    <div class="dropdown">
+        <button class="dropbtn"><b>IM_WORKBOOK</b></button>
+        <div class="dropdown-content">
+            <div class="dropdown-submenu">
+                <a href="#">WEEK ONE</a>
+                <div class="dropdown-content2">
+                    <a href="#">img_week1</a>
+                    <a href="#">fonts_week1</a>
+                    <a href="#">index.html</a>
+                </div>
+            </div>
+            
+            <div class="dropdown-submenu">
+                <a href="#">WEEK TWO</a>
+                <div class="dropdown-content2">
+                    <a href="#">img_week2</a>
+                    <a href="#">fonts_week2</a>
+                    <a href="#">index.html</a>
+                </div>
+            </div>
+
+            <div class="dropdown-submenu">
+                <a href="#">WEEK THREE</a>
+                <div class="dropdown-content2">
+                    <a href="#">img_week3</a>
+                    <a href="#">fonts_week3</a>
+                    <a href="#">index.html</a>
+                </div>
+            </div>
+            <a href="#">index.html</a>
+        </div>
+    </div>
+</div>
+    <div class="div4">Learning how to folder meant learning how to navigate how code is read.<br>This meant creating unique folders within each week, for all the cool fonts and images that each page needed.
+        <p><br>Someone wise once said; <i>'It promotes organization, maintainability, scalability, readability, code reusability, modularity, separation of concerns, and ease of deployment. It is a fundamental aspect of writing clean, efficient, and maintainable code, and it greatly contributes to the overall success of a web application.'</i></p>
+        <p style="font-size: 10px"><br><i>source: https://snehasishkonger.medium.com/why-folder-structure-is-so-important-in-web-dev-project</i></p>
+    </div>
+    <div class="div3">
+    <p style="color: rgb(203, 169, 82)"><br><B>H(elp)TM(ight)L(ose) This Race</B><br></p>
+    <br><p>In my first week at uni, they made us run. We raced to complete the code. This is our first attempt at anything to do with html... as you can see.</p>
+    <p>Upon further inspection, there is so much wrong with this - but it is nice to see how far we have come.</p>
+    <img src="img_week1.1/tagrace.jpg" height="200px" width="auto" alt="htmlrace">
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cleo's Website</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing:border-box;
+            outline: none;
+        }
+        body {
+            background-color: rgb(133, 204, 226);
+            overflow-x: hidden;
+            font-size: 12px;
+            line-height: 1rem;
+            justify-content: center;
+            align-items: center;
+        }
+        html{ width:100vw;
+            height:100%;
+        }
+        .heading1 {
+            margin: 10%;
+            margin-left: 30%;
+            font-size: 20px;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typewriter 5s steps(20) infinite alternate, blink 800ms steps(13) infinite normal;
+            border-right: 5px solid rgb(255, 255, 255);
+            color:rgb(214, 147, 148);
+            font-family: PixelifySans;
+            
+        }
+        .heading2 {
+            margin: 25px;
+            color:aliceblue;
+        }
+        .heading3 {
+            margin-left: 24px;
+            color: purple;
+        }
+        
+        .p1 {
+            line-height:normal;
+            margin: 25px;
+            text-align: center;
+            color: white;
+            opacity: 50%;
+        }
+        .p2 {
+            line-height:normal;
+            margin: 25px;
+
+        }
+        
+        .Div1 {
+            opacity: 30%;
+            text-align: center;
+            color: white;
+            position: fixed; top: 40%; left: 50%; transform: translate(-50%, -50%);
+        }
+        .div2 {
+            margin: 10%;
+            padding-bottom: 10%;
+            color: white;
+            opacity: 40%;
+        }
+        .section2 {
+            margin: 25px;
+        }
+        .header {
+            background-color: yellow;
+            color: rgb(133, 204, 226);
+            height: 15vh;
+        }
+        .img1 {
+            width: 500px;
+            height: auto;
+            object-fit: cover;
+        }
+        .button {
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+        }
+        .button1 {
+            background-color: white;
+            color: #04AA6D;
+            border: 2px solid #04AA6D;
+            text-align: center;
+        }
+        .button1:hover {
+            background-color: #04AA6D;
+            color: white;
+            text-align: center;
+            font-size: 20px;
+        }
+        .button2 {
+            background-color: white;
+            color: #040aaa;
+            border: 2px solid #040aaa;
+            text-align: center;
+        }
+        .button2:hover {
+            background-color: #040aaa;
+            color: white;
+            text-align: center;
+            font-size: 20px;
+        }
+        .button3 {
+            background-color: transparent;
+            border-color: transparent;
+        }
+        .button3:hover {
+            width: 500px;
+            height: auto;
+        }
+        .container {
+            position: relative;
+            top:-1750px;
+        }
+        .containerbackground {
+            position: relative;
+            top: 150px;
+            left: 0px;
+            bottom: 0;
+            z-index: -1;
+            color: #c6afaf;
+            font-size: 90px;
+            line-height: 100px;
+            font-family: PixelifySans;
+            text-align:center
+        }
+        .imagezoom:hover {
+            scale:1.1;
+            transition: 0.2s ease;
+        }
+        .vintagephone-moov {
+            animation: moov 2.2s linear alternate-reverse infinite;
+        }
+        .dialphone-moov {
+            animation: moov 3s linear alternate-reverse infinite;
+        }
+        .telecomphone-moov {
+            animation: moov 2.5s linear alternate-reverse infinite;
+        }
+        .blackberry-moov {
+            animation: moov 2.2s linear alternate-reverse infinite;
+        }
+        .iphone-moov {
+            animation: moov 3s linear alternate-reverse infinite;
+        }
+        .nokia-moov {
+            animation: moov 2.5s linear alternate-reverse infinite;
+        }
+        @keyframes moov {
+            0% {
+                transform: translateX(90%);
+            }
+            100% {
+                transform: translateX(0%);
+            } 
+        }
+        @font-face {
+            font-family: PixelifySans;
+            src: url(fonts/PixelifySans-VariableFont_wght.ttf); format:'truetype';
+        }
+        @keyframes typewriter {
+            from {
+                width: 0%;
+            }
+            to {
+                width: 45%;
+            }
+        }
+        @keyframes blink {
+            from {
+                border-color:rgb(255, 255, 255);
+            }
+            to { 
+                border-color: transparent;
+            }
+        }
+    </style>
+</head>
+<body>
+     <h1 class="heading1"> welcome to cleo's website :)</h1>
+        
+            <p class="p1"> welcome to my first ever html <i>page</i>...? <br>if that is what you call it.(this is a paragraph)
+            i like code <b>i guess</b>(this is another paragraph)</p>
+        
+        <section>
+        <div class="Div1">
+            catch them if you can
+        </div>
+            <div class="containerbackground">
+                <p>week<br>one</p><br>
+                <p>week<br>two</p><br>
+                <p>week<br>three</p><br>
+                <p>week<br>four</p><br>
+                <p>week<br>five</p><br>
+                <p>week<br>six</p><br>
+            </div>
+            <div class="container">
+            <div class="vintagephone-moov">
+                <a href="week1/index.html">
+                <button class="button3" type="button">
+                    <img class="imagezoom" src="img/vintagephone.png" width="220px" height="auto" alt="flipphone">
+                </button>
+                 </a>
+            </div>
+            <div class="dialphone-moov">
+                <a href="week2/index.html">
+                <button class="button3" type="button">
+                    <img class="imagezoom" src="img/dialphone.png" width="300px" height="auto" alt="dialphone">
+                </button>
+                </a>
+            </div>
+            <div class="telecomphone-moov">
+                <a href="week3/index.html">
+                <button class="button3" type="button">
+                    <img class="imagezoom" src="img/telecomphone.png"  width="250px" height="auto" alt="telecomphone">
+                </button>
+                </a>
+            </div>
+            <div class="blackberry-moov">
+                <a href="week4/index.html">
+                <button class="button3" type="button">
+                    <img class="imagezoom" src="img/blackberry.png"  width="300px" height="auto" alt="blackberry">
+                </button>
+                </a>
+            </div>
+            <div class="iphone-moov">
+                <a href="week5/index.html">
+                <button class="button3" type="button">
+                    <img class="imagezoom" src="img/iphone.png"  width="300px" height="auto" alt="iphone">
+                </button>
+                </a>
+            </div>
+            <div class="nokia-moov">
+                <a href="week6/index.html">
+                <button class="button3" type="button">
+                    <img class="imagezoom" src="img/nokia.png"  width="150px" height="auto" alt="nokia">
+                </button>
+                </a>
+            </div>
+        </div>
+        <div class="div2">
+            what are you doing? they aren't down here...
+        </div>
+</body>
+</html>

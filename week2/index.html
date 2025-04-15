@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week two</title>
+    
+    <style>
+        *{
+         margin:10px;
+        }
+        body {
+            background-image: url(https://i.pinimg.com/736x/60/70/2d/60702dfa077cb59a2e2d2b18f0219a9e.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .div1 {
+            color: white;
+            position: fixed; top: 40%; left: 50%; transform: translate(-50%, -50%);
+        }
+        img.draggable {
+            width: 150px;
+            height: auto;
+            position: absolute;
+            cursor: grab;
+        }
+    </style>
+    </head>
+<body>
+    <div class="div1">
+        <h1>This is Week Two</h1>
+        <div>
+        <h3>So, what is week two?</h3>
+        <p style="font-size: larger;">Firstly<b>PROTOTYPING</b>(crazy eights + modular mockup)</p>
+        <p>Unfortunately, you are going to have to sort through my junk to find my crazy eights activity and modular mock-up. They made my brain totally chaotic, just like this page :).</p>
+        <p style="font-size: larger;">Make! It!<b>Bling!</b>what style i really like! eg. colour palette, fonts, assets, cursor...</p>
+        <p>This page is a pretty good representation of my favourite style, collage! I am slowly learning how to translate this into code, I am particularly utilising buttons and imagery. 
+            They seem like a good way to incorporate both colour, fun and interactivity!</p>
+        <p>I have always been impressed by designer Jazz Grant and their ability to incorporate collage mediums into their website.<br> Click<a style="color: rgb(198, 255, 255);" href="https://jazzgrantstudio.com/">here</a>to see their work..</p>
+        </div>
+    </div>
+
+        <img class="draggable" src="img_week2/prototypegif.gif" alt="websiteprototype">
+         <img class="draggable" src="img_week2/crazyeights.jpg" alt="crazyeights">
+         <img class="draggable" src="img_week2/silverflower.png" alt="silverflower"> 
+        <img class="draggable" src="img_week2/specialtag.png" alt="specialtag">
+        <img class="draggable" src="img_week2/yellowstar.png" alt="yellowstar">
+        <img class="draggable" src="img_week2/fourleafclover.png" alt="fourleafclover">
+        <img class="draggable" src="img_week2/bluelighter.png" alt="bluelighter">
+        <img class="draggable" src="img_week2/breadtag.png" alt="breadtag">
+        <img class="draggable" src="img_week2/newspaperstack.png" alt="newspaperstack">
+        <img class="draggable" src="img_week2/greenapple.png" alt="greenapple">
+        
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let offsetX, offsetY, isDragging = false, activeImg = null;
+
+            document.querySelectorAll(".draggable").forEach(img => {
+                img.addEventListener("mousedown", (e) => {
+                    isDragging = true;
+                    activeImg = img;
+                    offsetX = e.clientX - img.getBoundingClientRect().left;
+                    offsetY = e.clientY - img.getBoundingClientRect().top;
+                    img.style.cursor = "grabbing";
+                });
+            });
+
+            document.addEventListener("mousemove", (e) => {
+                if (isDragging && activeImg) {
+                    activeImg.style.left = `${e.clientX - offsetX}px`;
+                    activeImg.style.top = `${e.clientY - offsetY}px`;
+                }
+            });
+
+            document.addEventListener("mouseup", () => {
+                isDragging = false;
+                if (activeImg) activeImg.style.cursor = "grab";
+                activeImg = null;
+            });
+        });
+    </script>
+</body>
+</html>
