@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.2/p5.min.js"></script>
+        <script language="javascript" type="text/javascript" src="IntMedia_Week5_WebCam.js"></script>
+
+    <title>week five</title>
+    <style>
+            
+        body {
+            display: grid; 
+            place-items: center;
+            background-color: rgb(0, 0, 0);
+        }
+        .imagezoom:hover {
+            scale:1.1;
+            transition: 0.2s ease;
+        }
+        .button {
+            background-color: transparent;
+            border-color: transparent;
+            color: white;
+        }
+        .button:hover {
+            width: 500px;
+            height: auto;
+        }
+        .divone {
+            position: absolute;
+            left: 50px;
+            top: 30%;
+            color:white;
+        }
+        .divzero {
+            position: absolute;
+            color: white;
+            font-family: SourceCodePro;
+            
+        }
+        .divtwo {
+            position: absolute;
+            left: 70%;
+            top: 9%;
+            right: 5%;
+            color: white;
+            font-family: RubikMonoOne;
+            text-align: left;
+        }
+        .divthree {
+            position: absolute;
+            left: 70%;
+            top: 60%;
+            right: 5%;
+            color: white;
+            font-family: RubikMonoOne;
+            text-align: left;
+            
+        }
+        @font-face {
+            font-family: SourceCodePro;
+            src: url(fonts/SourceCodePro-VariableFont_wght.ttf); format:'truetype';
+        }
+        @font-face {
+            font-family: RubikMonoOne;
+            src: url(fonts/RubikMonoOne-Regular.ttf); format:'truetype';
+        }
+    </style>
+    </head>
+<body>
+    <div class="divzero">
+    <h1>WELCOME TO WEEK FIVE</h1>
+    </div>
+    <div class='divone'>
+        <a href="\week6\index.html">
+        <button class="button" type="button">
+            <img class="imagezoom" src="Images/VintageRecordPlayer.png" width="300px" height="auto" alt="VintageRecordPlayer">
+            <br>music on please<br>or just go to week six
+        </button>
+        </a>
+    </div>
+
+    <div class="divtwo">
+Week five was all about image in design.<br><br>
+More preciscely, computer vision.<br><br>
+Web design with a camera feature is a little creepy and a tad offputting. I can understand why this feature is not often employed within websites.<br><br>
+This page was startling to create... someone was always watching. 
+    </div>
+
+    <div class='divthree'>
+        <a href="\week4\research\index.html">
+        <button class="button" type="button">
+            <img class="imagezoom" src="folder.png" width="100px" height="auto" alt="Folder">
+            <br>b2research<br>(back2)
+        </button>
+        </a>
+      </div>
+</body>
+</html>
