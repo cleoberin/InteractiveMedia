@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Week Nine</title>
+
+  <style>
+    @font-face {
+      font-family: Codystar;
+      src: url(fonts/Codystar-Regular.ttf) format('truetype');
+    }
+    @font-face {
+            font-family: SourceCodePro;
+            src: url(fonts/SourceCodePro-VariableFont_wght.ttf); format:'truetype';
+        }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: rgb(255, 255, 255);
+      color: #00ff00;
+      font-family: Arial, sans-serif;
+    }
+
+    .title {
+      font-family: Codystar, cursive;
+      text-align: center;
+      color: #00ff00;
+      padding: 2vh 0;
+      font-size: 4vw;
+    }
+
+    .intro {
+      text-align: center;
+      margin: 2vh auto;
+      font-size: 5vh;
+      max-width: 600px;
+      line-height: 1.5;
+      font-family: SourceCodePro;
+      line-height: 4vh;
+    }
+
+    .video-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      font-family: SourceCodePro;
+    }
+
+    .video-wrapper {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .video-column {
+      background-color: #9f9b87;
+      width: 100%;
+      padding: 15px;
+      border-radius: 10px;
+      color: rgb(255, 255, 255);
+    }
+
+    .video-column p {
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-family: Codystar, monospace;
+    }
+
+    video {
+      width: 100%;
+      border: 3px solid rgb(132, 132, 132);
+      border-radius: 5px;
+    }
+
+    .keyboard-img {
+      width: 100%;
+      max-width: 100%;
+      margin-top: 5px;
+    }
+
+    @media (max-width: 800px) {
+      .video-wrapper {
+        width: 100%;
+      }
+
+      .title {
+        font-size: 6vw;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="title">This is Week Nine</div>
+
+  <div class="intro">
+    <h2>HELLO WORLD. WELCOME TO THE FINAL WEEK OF PHYSICAL COMPUTING<br>[THE LAST ONE]</h2>
+  </div>
+
+  <div class="video-grid">
+    <div class="video-wrapper">
+      in week 9, we took our arduino experiments to the next level. this time, it wasn’t just about building circuits we finally made them talk to our computers.<br>
+      <div class="video-column">
+        <p>[ IT ]</p>
+        <video autoplay muted loop>
+          <source src="vids/vid2.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <img src="images/keyboard.png" alt="keyboard" class="keyboard-img" />
+    </div>
+
+    <div class="video-wrapper">
+      we connected the physical with the digital. using a potentiometer [a knob-like sensor that adjusts resistance], we were able to control what appeared on a live, responsive webpage. turning the dial changed values on our screens in real time.<br>
+      <div class="video-column">
+        <p>[ WAS ]</p>
+        <video autoplay muted loop>
+          <source src="vids/vid3.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <img src="images/keyboard2.png" alt="keyboard2" class="keyboard-img" />
+    </div>
+
+    <div class="video-wrapper">
+      it was the first time we saw physical input directly affect something on our screens. turning a dial and watching the webpage respond in real time made the connection between hardware and software feel real and so cool.<br>
+      <div class="video-column">
+        <p>[ FUN ]</p>
+        <video autoplay muted loop>
+          <source src="vids/vid4.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <img src="images/keyboard3.png" alt="keyboard3" class="keyboard-img" />
+    </div>
+  </div>
+
+  
+  
+  </div>
+
+</body>
+</html>
