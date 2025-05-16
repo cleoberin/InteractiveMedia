@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Research</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      text-align: center;
+      padding: 2rem;
+    }
+    
+
+    .title {
+        text-align: left;
+      position: absolute;
+      line-height: 75%;
+      top: 25%;
+      left: 25%;
+      font-size: 10vw;           
+      color: rgba(255, 0, 0); 
+      white-space: nowrap;
+      pointer-events: none;     
+      z-index: 0;
+    }
+
+    .text {
+        text-align: left;
+      position: absolute;
+      line-height: 75%;
+      top: 50%;
+      left: 25%;
+      font-size: 3vw;           
+      color: rgb(0, 0, 0); 
+      white-space: nowrap;
+      pointer-events: none;     
+      z-index: 0;
+    }
+
+    .folder {
+    left: 20%;
+      width: 40vh;
+      margin: 7vh auto;
+      background-color: transparent;
+      border: 2px solid #000000;
+      border-radius: 5px;
+      position: relative;
+      cursor: pointer;
+      box-shadow: 2px 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.2s ease;
+    }
+
+    .folder:hover {
+      transform: scale(1.02);
+    }
+
+    .folder::before {
+      content: 'click me';
+      color: rgb(0, 0, 0);
+      position: absolute;
+      top: -20px;
+      left: 0;
+      width: 120px;
+      height: 30px;
+      background-color: transparent;
+      border: 2px solid #000000;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .folders {
+      position: relative;
+      z-index: 1;
+    }
+
+    .folder-body {
+      display: none;
+      padding: 1rem;
+      background-color: transparent;
+      border-radius: 0 0 5px 5px;
+      text-align: left;
+      font-size: 0.75 vw;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+    .button {
+            background-color: transparent;
+            border-color: transparent;
+            font-family: SourceCodePro;
+           color:rgb(0, 0, 0);
+           border-radius: 10%;
+           margin-right: 10%;
+        }
+    .imagezoom {
+            border-radius: 5%;
+            border: white, 1vh;
+        }
+
+    .imagezoom:hover {
+            scale:1.05;
+            transition: 0.2s ease;
+            border-radius: 5%;
+
+        }
+        .divone {
+        text-align: center;
+        margin-top: 10%;
+        z-index: 10;
+        }
+        @font-face {
+            font-family: SourceCodePro;
+            src: url(fonts/SourceCodePro-VariableFont_wght.ttf); format:'truetype';
+        }
+
+    
+
+  </style>
+</head>
+<body>
+
+    <div class="title">
+        RE:<br>SEARCH
+         </div>
+    
+    <div class="text">
+    this was <br> the research that was <br>collated for the weeks of 6-9. 
+    </div>
+
+  <div class="folder" onclick="toggleFolder('folder1')">
+    <div class="folder-body" id="folder1">
+      <p><a style="color:#FF0000;" href="http://dh.library.yale.edu/projects/vogue/coveraverages/">[ROBOTS READING VOGUE]</a></p>
+      <ul>
+        <li>A collection of data from the covers of Vogue for each given year, genereating a mean RGB value for each pixel, on every cover.</li>
+        <li>This data is collated from all covers, for each decade. The result is a visualisation of continuation and trends present throughout the years.</li>
+        <img height="auto" width="200vw" src="images/vogue.png" alt="vogue">
+         <p>this is an interesting representation of data, trending styles and art. it provides insight into our patterns as humans and artists - which is a concept i really enjoy. </p>
+      </ul>
+    </div>
+  </div>
+
+  <div class="folder" onclick="toggleFolder('folder2')">
+    <div class="folder-body" id="folder2">
+      <p><a style="color:#FF0000;" href="https://www.lightscape.ie/samsung-do-bigger-things">[BECKETT BRIDGE HARP]</a></p>
+      <ul>
+        <li>Lightscape created visuals which animated each string of the harp in time with the playing of strings on a physical harp located on the Quayside and played by Aisling Ennis.</li>
+        <li>Guests could also pluck the strings on an app, and the corresponding string on the bridge would in turn light up in real-time and play a note on speakers located locally.</li>
+        <iframe title="vimeo-player" src="https://player.vimeo.com/video/242604310?h=9070cef7e5" width="200vw" height="auto" frameborder="0"    allowfullscreen></iframe>
+         <p>this project is a perfect example of the combination of physical computing, sound and interactivity; the use of light and sound, in conjunction with a user interface, to alter the external environment. </p>
+      </ul>
+    </div>
+  </div>
+
+  <div class="folder" onclick="toggleFolder('folder3')">
+    <div class="folder-body" id="folder3">
+      <p><a style="color:#FF0000;" href="https://cdm.link/inside-the-livecoding-algorave-movement-and-what-it-says-about-music/">[CREATE DIGITAL MUSIC]</a></p>
+      <ul>
+        <li>TidalCycles is a free, open source tool that Alex McLean created, with its original inspiration found within research into analysing Indian tabla rhythms.</li>
+        <li>There is a the mini-language inside Tidal for describing polyrhythmic sequences, as well as a unique conception of cyclic time.</li>
+        <iframe width="200vw" height="auto" src="https://www.youtube.com/embed/kr4DdQuNAKc?si=1C5PiUmSl1YB49Q1&amp;start=63" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>         
+        <p>this is the edge between music theory and interface design, code and musical material, artist and organizer, musician and developer. its insane. </p>
+      </ul>
+    </div>
+  </div>
+
+  <div class="folder" onclick="toggleFolder('folder4')">
+    <div class="folder-body" id="folder4">
+      <p><a style="color:#FF0000;" href="https://www.victorleung.info/post/polargraph-in-exhibition/">[ART VIA POLARGRAPH]</a></p>
+      <ul>
+        <li>Created using an Arduino micro controller, Victor Leung created an exhibit where his programmed polargraph machine created an artpiece in real time.</li>
+        <li>This creation is categorised as 'drawing art', and there are many different forms of code and robotics which can create a plethora of works.</li>
+        <img height="auto" width="200vw" src="images/polygraph.jpg" alt="polargraph">
+         <p>this is a new concept of art that is only just emerging onto the scenescape of contemporary art. its new and interesting; there are so many capabilities with programs such as this one.</p>
+      </ul>
+  </div>
+  </div>
+
+  <div class="folder" onclick="toggleFolder('folder5')">
+    <div class="folder-body" id="folder5">
+      <p><a style="color:#FF0000;" href="https://channel.louisiana.dk/video/pipilotti-rist-freeing-the-wonderlight">[FREEING THE WONDERLIGHT]</a></p>
+       <ul>
+        <li>Pipilotti Rist explores how digital art can engage the whole body, which relates to physical computing through sensors and responsive environments that react to movement or touch.</li>
+        <li>She embraces imperfection and organic forms, encouraging coders to design with randomness, analog inputs, or unpredictable behaviors to create more human-like systems.</li>
+        <iframe title="vimeo-player" src="https://player.vimeo.com/video/333100607?h=ec28ff30c7" width="200vw" height="auto" frameborder="0"    allowfullscreen></iframe>         
+        <p>rist’s work made me think about how code and sensors can shape physical spaces in subtle, organic, and responsive ways - and how even physical computing design can be human-like.</p>
+      </ul>
+    </div>
+  </div>
+
+  <div class="folder" onclick="toggleFolder('folder6')">
+    <div class="folder-body" id="folder6">
+      <p><a style="color:#FF0000;" href="https://edit.church/">[EDIT.CHURCH WEBSITE]</a></p>
+       <ul>
+        <li>The site employs 3D modeling to create a spatial experience, allowing users to explore content within a three-dimensional space.</li>
+        <li>Users can navigate through the website by interacting with the 3D environment, offering a more intuitive and engaging way to access information. This method of navigation breaks away from traditional scrolling, providing a unique user experience.</li>
+        <img height="auto" width="200vw" src="images/church.gif" alt="edit.church">
+        <p>These design choices contribute to a memorable and engaging user experience, aligning with contemporary web design trends that emphasise interactivity and visual depth.</p>
+      </ul>
+    </div>
+  </div>
+
+  <div class="divone">
+            <a href="/week7/index.html">
+              <button class="button" type="button">
+                <img class="imagezoom" src="gifs/seven.gif" width="100px" height="auto" alt="Folder">
+                <br>[CLICK HERE]<br>FOR WEEK SEVEN
+              </button>
+            </a>
+            <a href="/week8/index.html">
+            <button class="button" type="button">
+              <img class="imagezoom" src="gifs/8ball.gif" width="100px" height="auto" alt="8ball">
+              <br>[CLICK HERE]<br>FOR WEEK EIGHT
+            </button>
+          </a>
+          <a href="/week9/index.html">
+            <button class="button" type="button">
+              <img class="imagezoom" src="gifs/9click.gif" width="90px" height="auto" alt="9">
+              <br>[CLICK HERE]<br>FOR WEEK NINE
+            </button>
+          </a>
+          </div>
+
+  <script>
+    function toggleFolder(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === "block" ? "none" : "block";
+    }
+  </script>
+
+</body>
+</html>
