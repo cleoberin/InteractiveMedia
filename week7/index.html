@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week seven</title>
+
+    <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.2/p5.min.js"></script>
+    <script language="javascript" type="text/javascript" src="IntMedia_Week7_MouseHoverLight.js"></script>
+    <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    #sketch-holder canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1; 
+      pointer-events: none;
+    }
+    
+    .divone {
+      position: absolute;
+      top: 10%;
+      margin-left: 15%;
+      font-family: SourceCodePro;
+      color: rgb(0, 0, 0);
+      font-size: small;
+    }
+    .Heading {
+      font-family: RubikMonoOne;
+      color: rgb(130, 130, 130);
+      font-size: 7vh;
+      line-height: 6vh;
+      text-align: left;
+
+    }
+    .Heading2 {
+      font-family: RubikMonoOne;
+      color: rgb(255, 0, 0);
+      font-size: 7vh;
+      line-height: 6vh;
+      padding-bottom: 5vh;
+      text-align: left;
+    }
+
+    .imagezoom {
+            border-radius: 5%;
+            border: white, 1vh;
+        }
+
+        .imagezoom:hover {
+            scale:1.05;
+            transition: 0.2s ease;
+            border-radius: 5%;
+
+        }
+        .button {
+            background-color: transparent;
+            border-color: transparent;
+            font-family: SourceCodePro;
+           color:rgb(0, 0, 0);
+           border-radius: 10%;
+           margin-right: 10%;
+        }
+       
+        .image {
+          border-radius: 5%;
+          border-color: red;
+          border-width: 1vh;
+          padding: 5%;
+        }
+      
+        .divtwo {
+            background-color: red;
+            border-radius: 5%;
+           
+        }
+        .divthree {
+            background-color: red;
+            border-radius: 5%;
+            
+        }
+        .divfour {
+            background-color: red;
+            border-radius: 5%;
+            margin-right: 10%;
+          
+        }
+        .divfive {
+        text-align: center;
+
+        }
+        .divsix {
+        color: black;
+        text-align: center;
+        }
+        .image-row {
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 20px;       
+          }
+          .image-row > div {
+            flex: 1 1 200px; 
+            min-width: 200px; 
+          }
+        .subheading {
+          padding: 5%;
+        }
+
+    @font-face {
+            font-family: SourceCodePro;
+            src: url(fonts/SourceCodePro-VariableFont_wght.ttf); format:'truetype';
+        }
+        @font-face {
+            font-family: RubikMonoOne;
+            src: url(fonts/RubikMonoOne-Regular.ttf); format:'truetype';
+        }
+  </style>
+</head>
+<body>
+
+    <div class="divone">
+        <div class="Heading">Week 7. Welcome to</div>
+        <div class="Heading2">physical computing.</div>
+      
+        <div class="image-row">
+          <div class="divtwo">
+            <img class="image" src="images/myfirstcircuit.png" width="90%" height="auto" alt="myfirstcircuit">
+            <div class="subheading">
+              my first circuit
+            </div>
+          </div>
+      
+          <div class="divthree">
+            <img class="image" src="images/whatsinmybag.png" width="90%" height="auto" alt="whatsinmybag">
+            <div class="subheading">
+              whats in my bag (physical computing edition)<br>
+            <br>Trade in the visualstudiocode and laptop guys, its time to get physical. 
+            <br> First impression of this box was daunting I won't lie. How does code (the very non-physcial
+            liminal stuff) have anything to do with this (very physical, i-can-touch-it stuff)?
+            </div>
+          </div>
+
+          <div class="divfour">
+            <img class="image" src="gifs/buttonled.gif" width="90%" height="auto" alt="Folder">
+              <div class="subheading">
+            <br>Hello Button(s)
+          </div>
+        </div>
+        
+          <div class="divfive">
+            <a href="research/index.html">
+              <button class="button" type="button">
+                <img class="imagezoom" src="images/board.jpg" width="100px" height="auto" alt="Folder">
+                <br>[CLICK HERE] FOR<br>ALL THE INSPO
+              </button>
+            </a>
+            <a href="/week8/index.html">
+            <button class="button" type="button">
+              <img class="imagezoom" src="gifs/8ball.gif" width="100px" height="auto" alt="8ball">
+              <br>[CLICK HERE]<br>FOR WEEK EIGHT
+            </button>
+          </a>
+          <a href="/week9/index.html">
+            <button class="button" type="button">
+              <img class="imagezoom" src="gifs/9click.gif" width="90px" height="auto" alt="9">
+              <br>[CLICK HERE]<br>FOR WEEK NINE
+            </button>
+          </a>
+          </div>
+
+        </div>
+      </div>
+</body>
+</html>
