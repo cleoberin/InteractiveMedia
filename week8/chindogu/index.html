@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chindogu</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.2/p5.min.js"></script>
+  <script src="ImageBouncing.js"></script>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      font-family: CalSans;
+      overflow-y: scroll;
+      position: relative;
+      background-color: palegoldenrod;
+      align-content: center;
+    }
+
+    @font-face {
+      font-family: CoralPixels;
+      src: url(fonts/CoralPixels-Regular.ttf) format('truetype');
+    }
+
+    @font-face {
+      font-family: CalSans;
+      src: url(fonts/CalSans-Regular.ttf) format('truetype');
+    }
+
+    .gallery-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      z-index: 0;
+      overflow: hidden;
+      padding: 10px;
+
+    }
+
+    .gallery-background img {
+      width: 40vh;
+      height: 40vh;
+      border-radius: 10px;
+    }
+
+
+    #sketch-holder {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+        padding: 5vh 5vw;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .divzero {
+      font-size: 10vh;
+      font-family: CalSans;
+      letter-spacing: 2vh;
+    }
+
+    .divone {
+    padding-top: 2%;
+      max-width: 60vw;
+      margin-top: -4vh;
+      font-family: CalSans;
+    }
+
+    .scroll-container {
+      margin-top: 4vh;
+      max-height: 20vh;
+      overflow: hidden;
+      mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+      -webkit-mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+    }
+
+    .scroll-text {
+      display: inline-block;
+      animation: scroll-up 20s linear infinite;
+      color: rgb(255, 255, 255);
+      font-family: CalSans;
+      font-size: 1em;
+      line-height: 1.5em;
+      white-space: pre-line;
+      transform: translateY(0%);
+      letter-spacing: 0.5vh;
+
+    }
+
+    @keyframes scroll-up {
+     0% { transform: translateY(0%); }
+    100% { transform: translateY(-50%); }
+    }
+
+    .chindogu-form {
+      margin-top: 4vh;
+      color: rgb(255, 255, 255);
+      font-family: CalSans;
+      max-width: 60vw;
+      margin-left: auto;
+      margin-right: auto;
+      letter-spacing: 1vh;
+      padding-bottom: 6vh;
+    }
+
+    textarea {
+      width: 100%;
+      height: 100px;
+      background-color: transparent;
+      color: rgb(255, 255, 255);
+      border: 1px solid #ffffff;
+      font-family: monospace;
+      padding: 10px;
+      resize: none;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: rgb(244, 246, 159);
+      color: white;
+      border: none;
+      font-family: CalSans;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    #output {
+      margin-top: 15px;
+      color: rgb(255, 255, 255);
+      white-space: pre-wrap;
+    }
+
+    @media (max-width: 768px) {
+  .divzero {
+    font-size: 6vh;
+    letter-spacing: 1vh;
+  }
+
+  .divone {
+    max-width: 90vw;
+    font-size: 1em;
+  }
+
+  .scroll-container {
+    max-height: 30vh;
+  }
+
+  .scroll-text {
+    font-size: 0.9em;
+    line-height: 1.3em;
+  }
+
+  .chindogu-form {
+    max-width: 90vw;
+    font-size: 0.9em;
+    letter-spacing: 0.5vh;
+    font-family: CalSans;
+  }
+
+  textarea {
+    height: 80px;
+    font-size: 0.9em;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 0.9em;
+    font-family: CalSans;
+
+  }
+
+  .gallery-background img {
+    width: 30vw;
+    height: 30vw;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <div class="gallery-background">
+    <img src="images/suctionhead.jpg" alt="suctionhead" />
+    <img src="images/noodleheadband.jpg" alt="noodleheadband" />
+    <img src="images/noodlefan.jpg" alt="noodlefan" />
+    <img src="images/butterstick.jpeg" alt="butterstick" />
+    <img src="images/feetbroom.jpg" alt="feetbroom" />
+    <img src="images/fingertoothbrush.jpg" alt="fingertoothbrush" />
+    <img src="images/lipstickoutline.jpg" alt="lipstickoutline" />
+    <img src="images/pocketwipes.jpg" alt="pocketwipes" />
+    <img src="images/reverserain.jpg" alt="reverserain" />
+    <img src="images/tissuehat.jpg" alt="tissuehat" />
+    <img src="images/chindogubabymop.jpg" alt="babymop" />
+    <img src="images/chindogufeet.png" alt="shoes" />
+    <img src="images/suctionhead.jpg" alt="suctionhead" />
+    <img src="images/noodleheadband.jpg" alt="noodleheadband" />
+    <img src="images/noodlefan.jpg" alt="noodlefan" />
+  </div>
+
+  <div id="sketch-holder"></div>
+
+  <div class="content">
+    <div class="divzero">[CHINDOGU]</div>
+
+    <div class="divone">
+      <br>“is the art of inventing everyday gadgets that appear to solve a particular problem… but are in reality pretty useless.”
+      <br><br>
+    </div>
+
+    <div class="scroll-container">
+      <div class="scroll-text">
+        THERE ARE TEN RULES OF CHINDOGU: <br><br>
+        A CHINDOGU CANNOT BE FOR REAL USE.<br><br>
+        A CHINDOGU MUST EXIST.<br><br>
+        INHERENT IN EVERY CHINDOGU IS THE SPIRIT OF ANARCHY.<br><br>
+        CHINDOGU ARE TOOLS FOR EVERYDAY LIFE.<br><br>
+        CHINDOGU ARE NOT FOR SALE.<br><br>
+        HUMOR MUST NOT BE THE SOLE REASON FOR CREATING A CHINDOGU.<br><br>
+        CHINDOGU IS NOT PROPAGANDA.<br><br>
+        CHINDOGU ARE NEVER TABOO.<br><br>
+        CHINDOGU CANNOT BE PATENTED.<br><br>
+        CHINDOGU ARE WITHOUT PREJUDICE.<br><br>
+
+        THERE ARE TEN RULES OF CHINDOGU: <br><br>
+        A CHINDOGU CANNOT BE FOR REAL USE.<br><br>
+        A CHINDOGU MUST EXIST.<br><br>
+        INHERENT IN EVERY CHINDOGU IS THE SPIRIT OF ANARCHY.<br><br>
+        CHINDOGU ARE TOOLS FOR EVERYDAY LIFE.<br><br>
+        CHINDOGU ARE NOT FOR SALE.<br><br>
+        HUMOR MUST NOT BE THE SOLE REASON FOR CREATING A CHINDOGU.<br><br>
+        CHINDOGU IS NOT PROPAGANDA.<br><br>
+        CHINDOGU ARE NEVER TABOO.<br><br>
+        CHINDOGU CANNOT BE PATENTED.<br><br>
+        CHINDOGU ARE WITHOUT PREJUDICE.<br><br>
+      </div>
+    </div>
+
+    
+
+    <div class="chindogu-form">
+      <p>TYPE IN YOUR MESSAGE BELOW,<br>CHINDOGU WILL MAKE IT... <strong>  NICER</strong></p>
+      <textarea style="color: white;" id="message" placeholder="UNNECESSARILY NICE-IFY YOUR TEXT..."></textarea><br>
+      <button onclick="apologize()">[SEND]</button>
+      <p id="output"></p>
+    </div>
+  </div>
+
+  <script>
+    function apologize() {
+      const msg = document.getElementById('message').value;
+      const softeners = [
+        "i'm terribly sorry, but ",
+        "please forgive me, however ",
+        "with the utmost respect, ",
+        "I humbly suggest ",
+        "this might not be my place, but "
+      ];
+      const softened = softeners.join('') + msg.replace(/[.!?]/g, '... maybe?');
+      document.getElementById('output').innerText = softened;
+    }
+  </script>
+
+</body>
+</html>
