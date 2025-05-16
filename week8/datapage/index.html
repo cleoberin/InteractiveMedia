@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DATA</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: monospace;
+      background-color: white;
+      color: black;
+      font-family: SourceCodePro;
+    }
+
+    header {
+      background-color: #0000ff;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 20px;
+      border-bottom: 2px solid black;
+      text-transform: uppercase;
+    }
+
+    .container {
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .card {
+      border: 1px solid black;
+      padding: 10px;
+      width: 200px;
+      background-color: white;
+    }
+
+    .card h3 {
+      font-size: 16px;
+      margin: 0 0 5px 0;
+      color: black;
+      border-bottom: 1px solid #0000ff;
+    }
+
+    .card p {
+      font-size: 13px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 12px;
+      border-top: 2px solid black;
+      background-color: #ffffff;
+    }
+    .iframe-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; 
+      gap: 10px; 
+      margin-top: 20px;
+    }
+    @font-face {
+            font-family: SourceCodePro;
+            src: url(fonts/SourceCodePro-VariableFont_wght.ttf); format:'truetype';
+        }
+  </style>
+</head>
+<body>
+
+  <header>WHATS INSIDE MY [ARDUINO KIT] BAG AND ITS THE SAME BUT ITS NOT [ITS THE MOST INTERESTING STUFF]</header>
+
+  <div class="container" id="cardContainer">
+    
+  </div>
+
+  <footer>THANK YOU TELSTRA CREATOR SPACE 4 THE FACILITIES<br>+ THANK YOU TO XITANG ZHAO, THE X LAB, MEGCELL + THE NEO STUDIOS, FOR THE FOLLOWING ARDUINO CONTENT THAT THOROUGHLY ENTERTAINED ME.</footer>
+
+  <script>
+  const data = [
+    {
+      title: "UNO R3 CONTROLLER BOARD x 1PC",
+      description: "a microcontroller used to build and control electronic projects like sensors, motors, and lights",
+      image: "images/arduino.png"
+    },
+    {
+      title: "LDC1602 MODULE (with pin header)",
+      description: "an LCD display used to show text or data from a microcontroller like the Arduino",
+      image: "images/LCDmodule.png"
+    },
+    {
+      title: "ULTRASONIC SENSOR",
+      description: "measures distance by sending out ultrasonic waves and calculating the time it takes for the sound to bounce back from an object.",
+      image: "images/ultrasonicsensor.png"
+    },
+    {
+      title: "DHT11 TEMPERATURE AND HUMIDITY MODULE x 1PC",
+      description: "measures the surrounding air's temperature and humidity levels.",
+      image: "images/temperaturemodule.png"
+    },
+    {
+      title: "ACTIVE BUZZER",
+      description: "the active buzzer is a component that produces sound when powered.  used to create audio signals without needing complex code to generate the sound.",
+      image: "images/activebuzzer.png"
+    }
+  ];
+
+  const container = document.getElementById('cardContainer');
+
+  data.forEach(item => {
+    const card = document.createElement('div');
+    card.className = 'card';
+
+    let cardContent = '';
+    if (item.image) {
+      cardContent += `<img src="${item.image}" alt="${item.title}" style="width:150px; display:block; margin-bottom:10px;">`;
+    }
+    cardContent += `<h3>${item.title}</h3><p>${item.description}</p>`;
+    card.innerHTML = cardContent;
+
+    container.appendChild(card);
+  });
+</script>
+
+<div class="iframe-container">
+
+<iframe width="20%" height="auto" src="https://www.youtube.com/embed/sjPAj1lXgtk?si=ZBizYceMwZftqz--" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="20%" height="auto" src="https://www.youtube.com/embed/6FXoO_gIXbQ?si=uisNaYZ3QsLHB8ud" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="20%" height="auto" src="https://www.youtube.com/embed/g_dBuR2GiTA?si=GdrSdOg7hjdDDUBs&amp;start=10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="20%" height="auto" src="https://www.youtube.com/embed/O7yoa-hwnkI?si=pbyURnFU8_D5sO3B&amp;start=10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</div>
+
+</body>
+</html>
