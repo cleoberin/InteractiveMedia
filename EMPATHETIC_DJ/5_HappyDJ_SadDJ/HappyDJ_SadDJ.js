@@ -122,7 +122,7 @@ function drawBlackoutSequence() {
 
   if (elapsed > 12000) {
     flickerAudio.stop();
-    window.location.href = '/4_Countdown/index.html';
+    window.location.href = '/InteractiveMedia/EMPATHETIC_DJ/4_Countdown/index.html';
   }
 }
 
