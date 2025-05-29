@@ -130,7 +130,7 @@ function handleButtonClick() {
 
       secondButton.mousePressed(() => {
         alert("WARNING: THE NEXT PAGE IS REALLY ANNOYING");
-        window.location.href = '/5_HappyDJ_SadDJ/index.html';
+        window.location.href = '/InteractiveMedia/EMPATHETIC_DJ/5_HappyDJ_SadDJ/index.html';
       });
 
       document.body.offsetHeight;
