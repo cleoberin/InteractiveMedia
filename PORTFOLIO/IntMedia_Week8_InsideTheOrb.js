@@ -1,5 +1,5 @@
 let images = [];
-let numImages = 20; 
+let numImages = 6; 
 
 function preload() {
   for (let i = 0; i < numImages; i++) {
