@@ -157,6 +157,10 @@
     font-family: SourceCodePro, monospace;
   }
 
+  body, h1, h2, h3, h4, h5, h6, p, div, span, button {
+  font-weight: normal;
+}
+
   @media (max-width: 800px) {
     .folio-layout {
       flex-direction: column;
@@ -512,7 +516,6 @@ function setupFolio(openId, viewerId, closeId) {
   });
 }
 
-// Setup each folio
 setupFolio('openFolio1', 'folioViewer1', 'closeFolio1');
 setupFolio('openFolio2', 'folioViewer2', 'closeFolio2');
 setupFolio('openFolio3', 'folioViewer3', 'closeFolio3');
